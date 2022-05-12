@@ -1263,7 +1263,7 @@ int ZBarcode_Encode(struct zint_symbol *symbol, const unsigned char *source, int
     local_source = (unsigned char *) _alloca(in_length + 1);
 #endif
 
-    memcpy(local_source, source, in_length);
+    memcpy(local_source, source, in_length+1);
     local_source[in_length] = '\0';
 
     /* Start acting on input mode */
